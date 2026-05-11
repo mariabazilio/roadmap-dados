@@ -63,7 +63,7 @@ st.markdown("""
 # ---------- ABAS ----------
 aba1, aba2, aba3, aba4 = st.tabs([
     "🏁 Breve Histórico",
-    "🛠️ Conceitos iniciais"
+    "🛠️ Conceitos iniciais",
     "📈 Analista",
     "⚙️ Engenheiro"
 ])
@@ -168,8 +168,60 @@ with aba1:
     - infraestrutura de dados
     """)
 
-# ---------- ANALISTA ----------
+# Conceitos gerais comuns pras duas profissões
 with aba2:
+
+    st.title("📈 Conceitos primordiais para entrada no mercado")
+
+    etapas = [
+        {
+            "titulo": "1. Fundamentos",
+            "descricao": "Excel, lógica, estatística e negócio",
+            "link": "https://www.youtube.com/results?search_query=excel+analise+de+dados"
+        },
+
+        {
+            "titulo": "2. SQL",
+            "descricao": "SELECT, JOIN, GROUP BY e CTE",
+            "link": "https://www.youtube.com/results?search_query=sql+analise+de+dados"
+        },
+
+        {
+            "titulo": "3. Power BI",
+            "descricao": "Dashboards, modelagem e KPIs",
+            "link": "https://www.youtube.com/results?search_query=power+bi+iniciante"
+        },
+
+        {
+            "titulo": "4. DAX",
+            "descricao": "Medidas, CALCULATE e contexto",
+            "link": "https://www.youtube.com/results?search_query=dax+power+bi"
+        },
+
+        {
+            "titulo": "5. Portfólio",
+            "descricao": "Projetos, GitHub e LinkedIn",
+            "link": "https://www.youtube.com/results?search_query=portfolio+dados"
+        }
+    ]
+
+    for etapa in etapas:
+
+        st.markdown(f"""
+        <div class="step">
+            <h2>{etapa["titulo"]}</h2>
+            <p>{etapa["descricao"]}</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.link_button("📚 Estudar", etapa["link"])
+
+        st.markdown("""
+        <div class="arrow">↓</div>
+        """, unsafe_allow_html=True)
+
+# Analista
+with aba3:
 
     st.title("📈 Roadmap Analista de Dados")
 
@@ -219,9 +271,9 @@ with aba2:
         st.markdown("""
         <div class="arrow">↓</div>
         """, unsafe_allow_html=True)
-
-# ---------- ENGENHEIRO ----------
-with aba3:
+        
+# Engenheiro
+with aba4:
 
     st.title("⚙️ Roadmap Engenheiro de Dados")
 
