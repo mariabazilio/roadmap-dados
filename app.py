@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Roadmap de Dados",
+    page_title="Roadmap Dados",
     page_icon="📊",
     layout="wide"
 )
@@ -52,38 +52,102 @@ p {
 # ---------- HERO ----------
 st.markdown("""
 <div class="big-card">
-    <h1>📊 Roadmap Interativo de Dados</h1>
+    <h1>📊 Roadmap Dados</h1>
     <p>
-    Um guia para quem quer entrar na área de dados e evoluir como
+    O Beabá para quem deseja mergulhar na área e se tornar um
     Analista ou Engenheiro de Dados.
     </p>
 </div>
 """, unsafe_allow_html=True)
 
 # ---------- ABAS ----------
-aba1, aba2, aba3 = st.tabs([
-    "🏁 Introdução",
+aba1, aba2, aba3, aba4 = st.tabs([
+    "🏁 Breve Histórico",
+    "🛠️ Conceitos iniciais"
     "📈 Analista",
     "⚙️ Engenheiro"
 ])
 
-# ---------- INTRODUÇÃO ----------
+# Breve histótico sobre dados (surgimento e etc)
+
 with aba1:
+    st.title("🏁 Introdução ao mundo dos dados")
 
     st.markdown("""
-    ## 📚 Breve histórico sobre dados
-
-    Dados existem há séculos, desde censos populacionais e registros comerciais.
-    Com a evolução da computação, passaram a ser armazenados digitalmente e usados
-    para gerar decisões estratégicas.
-
-    Hoje, empresas usam dados para:
-    - entender clientes
-    - reduzir custos
-    - prever comportamentos
-    - automatizar processos
-    - melhorar resultados
+    A história dos dados é muito mais antiga do que parece. Antes de bancos de dados,
+    dashboards e inteligência artificial, as pessoas já registravam informações para contar,
+    organizar e tomar decisões.
+    
+    Segundo a 365 Data Science, há evidências de registros desde **19.000 a.C.**, passando por
+    estatísticas de saúde pública, cartões perfurados, armazenamento magnético, bancos relacionais
+    e a era da internet. 
     """)
+
+    timeline = [
+        {
+            "ano": "19.000 a.C.",
+            "titulo": "Primeiros registros",
+            "texto": "O osso de Ishango é citado como uma das primeiras evidências de contagem e registro de informações.",
+            "link": "https://en.wikipedia.org/wiki/Ishango_bone"
+        },
+
+        {
+            "ano": "1640s",
+            "titulo": "Estatísticas de saúde pública",
+            "texto": "John Graunt coletou dados sobre mortes em Londres, analisando causas, idade e mortalidade.",
+            "link": "https://en.wikipedia.org/wiki/John_Graunt"
+        },
+
+        {
+            "ano": "1880s",
+            "titulo": "Processamento de dados",
+            "texto": "Herman Hollerith criou máquinas com cartões perfurados para acelerar o processamento do censo.",
+            "link": "https://en.wikipedia.org/wiki/Herman_Hollerith"
+        },
+
+        {
+            "ano": "1928",
+            "titulo": "Armazenamento magnético",
+            "texto": "Fritz Pfleumer patenteou a fita magnética, tecnologia que influenciou formas modernas de armazenamento.",
+            "link": "https://en.wikipedia.org/wiki/Fritz_Pfleumer"
+        },
+
+        {
+            "ano": "1960s",
+            "titulo": "Banco de dados relacional",
+            "texto": "Edgar Codd propôs o modelo relacional, base para tabelas com linhas e colunas.",
+            "link": "https://en.wikipedia.org/wiki/Edgar_F._Codd"
+        },
+
+        {
+            "ano": "1990s até hoje",
+            "titulo": "Internet, Big Data e IA",
+            "texto": "Com a internet, Google, Big Data, Machine Learning e IA, os dados passaram a ser gerados e usados em escala massiva.",
+            "link": "https://www.ibm.com/topics/big-data"
+        }
+    ]
+
+    for item in timeline:
+
+        st.markdown(f"""
+        <div class="step">
+            <h2>{item["ano"]} — {item["titulo"]}</h2>
+            <p>{item["texto"]}</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.link_button(
+            "📚 Saiba mais",
+            item["link"]
+        )
+
+        st.markdown("""
+        <div class="arrow">↓</div>
+        """, unsafe_allow_html=True)
+
+    st.caption(
+        "Fonte-base: 365 Data Science — The History of Data: From Ancient Times to Modern Day."
+    )
 
     st.markdown("""
     ## ⚖️ Analista x Engenheiro de Dados
