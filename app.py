@@ -6,44 +6,99 @@ st.set_page_config(
     layout="wide"
 )
 
-# ---------- CSS ----------
+# css
+# na ordem dos steps vem fundo, titulo, formatacao do texto, card principal, card de cada step, hover, setas, botoes, hover do botao, aba, sidebar, linha de separacao
 st.markdown("""
 <style>
 
+/* FUNDO GERAL */
 .stApp {
-    background-color: #f8fbf4;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
+/* TITULOS GERAIS */
+h1, h2, h3 {
+    color: #b6c2b9;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* TEXTO */
+p, li, span, div {
+    color: #f8fafc;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* CARD PRINCIPAL */
 .big-card {
-    background: white;
+    background: rgba(30, 41, 59, 0.95);
     padding: 35px;
     border-radius: 24px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.06);
     margin-bottom: 25px;
 }
 
+/* CARDS DAS ETAPAS */
 .step {
-    background: white;
+    background: rgba(30, 41, 59, 0.92);
     padding: 25px;
     border-radius: 22px;
     text-align: center;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    border-top: 8px solid #3b82f6;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.22);
+    border-left: 6px solid #84cc16;
     margin-bottom: 20px;
+    transition: 0.3s;
 }
 
+/* HOVER */
+.step:hover {
+    transform: translateY(-4px);
+    border-left: 6px solid #22c55e;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+}
+
+/* SETA */
 .arrow {
     text-align: center;
-    font-size: 40px;
-    color: #94a3b8;
+    font-size: 42px;
+    color: #64748b;
 }
 
-h1, h2, h3 {
-    color: #111827;
+/* BOTÕES */
+.stLinkButton a {
+    background-color: #84cc16 !important;
+    color: #0f172a !important;
+    border-radius: 999px !important;
+    padding: 10px 18px !important;
+    font-weight: bold !important;
+    border: none !important;
 }
 
-p {
-    color: #475569;
+/* HOVER BOTAO */
+.stLinkButton a:hover {
+    background-color: #a3e635 !important;
+    color: #020617 !important;
+}
+
+/* ABAS */
+button[data-baseweb="tab"] {
+    color: #cbd5e1;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+button[data-baseweb="tab"][aria-selected="true"] {
+    color: #84cc16 !important;
+}
+
+/* SIDEBAR */
+section[data-testid="stSidebar"] {
+    background-color: #111827;
+}
+
+/* LINHA HORIZONTAL */
+hr {
+    border-color: rgba(255,255,255,0.08);
 }
 
 </style>
