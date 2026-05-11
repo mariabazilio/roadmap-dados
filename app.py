@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 
 st.set_page_config(
     page_title="Roadmap de Dados",
@@ -9,160 +8,233 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-.main {
-    background-color: #0f172a;
+.stApp {
+    background-color: #f8fbf4;
+    background-image: radial-gradient(#b9dc91 1.2px, transparent 1.2px);
+    background-size: 22px 22px;
 }
+
+.hero {
+    background: white;
+    padding: 35px;
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+
+.roadmap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.phase {
+    background: white;
+    width: 520px;
+    padding: 28px;
+    border-radius: 26px;
+    text-align: center;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+    border-top: 8px solid #7cc242;
+}
+
+.phase h2 {
+    margin: 0;
+    color: #111827;
+}
+
+.phase p {
+    color: #64748b;
+}
+
+.connector {
+    width: 4px;
+    height: 55px;
+    background: #d9e8cc;
+}
+
+.children {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
 .card {
-    padding: 22px;
-    border-radius: 18px;
-    background: linear-gradient(135deg, #1e293b, #334155);
-    color: white;
-    margin-bottom: 18px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+    background: white;
+    width: 290px;
+    min-height: 180px;
+    padding: 24px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+    border-top: 7px solid #3b82f6;
 }
-.badge {
+
+.card.orange {
+    border-top-color: #f97316;
+}
+
+.card.green {
+    border-top-color: #22c55e;
+}
+
+.card.purple {
+    border-top-color: #8b5cf6;
+}
+
+.card.yellow {
+    border-top-color: #eab308;
+}
+
+.card h3 {
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+.btn {
     display: inline-block;
-    padding: 5px 12px;
+    margin-top: 10px;
+    padding: 9px 14px;
+    background: #111827;
+    color: white !important;
     border-radius: 999px;
-    background-color: #38bdf8;
-    color: #082f49;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.topic {
-    background-color: rgba(255,255,255,0.08);
-    padding: 8px 12px;
-    border-radius: 10px;
-    margin: 5px 0;
-}
-.project {
-    background-color: rgba(34,197,94,0.15);
-    border-left: 4px solid #22c55e;
-    padding: 12px;
-    border-radius: 10px;
-    margin-top: 12px;
+    text-decoration: none;
+    font-size: 14px;
 }
 </style>
 """, unsafe_allow_html=True)
 
-st.title("📊 Roadmap Interativo para Análise e Engenharia de Dados")
-st.write("Um guia visual para estudantes e estagiários que querem evoluir em SQL, BI, Python, Engenharia de Dados e carreira.")
+st.markdown("""
+<div class="hero">
+    <h1>📊 Roadmap Interativo de Dados</h1>
+    <p>Da base até análise e engenharia de dados, com links de estudo em cada etapa.</p>
+</div>
+""", unsafe_allow_html=True)
 
-roadmap = [
-    {
-        "fase": "01",
-        "titulo": "Fundamentos",
-        "nivel": "Iniciante",
-        "area": "Base",
-        "cor": "🟢",
-        "topicos": ["SQL básico", "JOINs", "GROUP BY", "Excel", "Modelagem inicial"],
-        "projeto": "Criar uma análise simples usando SQL + Excel."
-    },
-    {
-        "fase": "02",
-        "titulo": "Análise de Dados",
-        "nivel": "Iniciante/Intermediário",
-        "area": "BI",
-        "cor": "🔵",
-        "topicos": ["Power BI", "DAX", "KPIs", "Storytelling", "Dashboards"],
-        "projeto": "Criar um dashboard com indicadores de negócio."
-    },
-    {
-        "fase": "03",
-        "titulo": "Engenharia de Dados",
-        "nivel": "Intermediário",
-        "area": "Engenharia",
-        "cor": "🟣",
-        "topicos": ["ETL/ELT", "Data Warehouse", "Staging", "SCD", "Pipelines"],
-        "projeto": "Criar um pipeline CSV/API → tratamento → base final."
-    },
-    {
-        "fase": "04",
-        "titulo": "Python para Dados",
-        "nivel": "Intermediário",
-        "area": "Python",
-        "cor": "🟡",
-        "topicos": ["Pandas", "APIs", "JSON", "Automação", "Streamlit"],
-        "projeto": "Criar um app em Streamlit consumindo ou simulando dados."
-    },
-    {
-        "fase": "05",
-        "titulo": "Mercado e Portfólio",
-        "nivel": "Carreira",
-        "area": "Carreira",
-        "cor": "🟠",
-        "topicos": ["GitHub", "Documentação", "Cloud básica", "LinkedIn", "Projetos"],
-        "projeto": "Publicar projetos no GitHub e divulgar no LinkedIn."
-    }
-]
+aba1, aba2, aba3 = st.tabs(["🏁 Introdução", "📈 Roadmap Analista", "⚙️ Roadmap Engenheiro"])
 
-df = pd.DataFrame(roadmap)
+with aba1:
+    st.markdown("""
+    ## Breve histórico sobre dados
 
-st.sidebar.title("🎛️ Filtros")
-area = st.sidebar.selectbox("Área", ["Todas"] + sorted(df["area"].unique()))
-nivel = st.sidebar.selectbox("Nível", ["Todos"] + sorted(df["nivel"].unique()))
+    O uso de dados começou muito antes da tecnologia moderna, com registros comerciais,
+    censos, controles financeiros e documentos administrativos. Com a evolução da computação,
+    os dados passaram a ser armazenados em bancos digitais e usados para apoiar decisões.
 
-df_filtrado = df.copy()
+    Hoje, dados são usados para entender clientes, medir resultados, prever cenários,
+    automatizar processos e melhorar estratégias de negócio.
 
-if area != "Todas":
-    df_filtrado = df_filtrado[df_filtrado["area"] == area]
+    ### Analista x Engenheiro de Dados
 
-if nivel != "Todos":
-    df_filtrado = df_filtrado[df_filtrado["nivel"] == nivel]
+    **Analista de Dados:** transforma dados em indicadores, dashboards e insights.
 
-st.sidebar.divider()
-st.sidebar.subheader("📈 Progresso estimado")
-progresso = st.sidebar.slider("Meu progresso", 0, 100, 25)
-st.sidebar.progress(progresso / 100)
+    **Engenheiro de Dados:** constrói pipelines, integrações e estruturas para que os dados cheguem com qualidade.
+    """)
 
-st.subheader("🧭 Trilha principal")
+with aba2:
+    st.markdown("""
+    <div class="roadmap">
 
-cols = st.columns(2)
-
-for i, row in df_filtrado.reset_index(drop=True).iterrows():
-    topicos_html = "".join([f"<div class='topic'>✅ {topico}</div>" for topico in row["topicos"]])
-
-    card_html = f"""
-    <div class="card">
-        <div class="badge">{row['cor']} Fase {row['fase']}</div>
-        <h2>{row['titulo']}</h2>
-        <p><b>Nível:</b> {row['nivel']}</p>
-        <p><b>Área:</b> {row['area']}</p>
-        <h4>Tópicos:</h4>
-        {topicos_html}
-        <div class="project">
-            <b>Projeto sugerido:</b><br>
-            {row['projeto']}
+        <div class="phase">
+            <h2>📈 Roadmap Analista de Dados</h2>
+            <p>Foco em análise, indicadores, dashboards e tomada de decisão.</p>
         </div>
+
+        <div class="connector"></div>
+
+        <div class="children">
+            <div class="card green">
+                <h3>1. Fundamentos</h3>
+                <p>Excel, lógica, estatística básica e entendimento de negócio.</p>
+                <a class="btn" href="https://www.youtube.com/results?search_query=excel+para+analise+de+dados" target="_blank">Estudar</a>
+            </div>
+
+            <div class="card">
+                <h3>2. SQL</h3>
+                <p>SELECT, JOIN, GROUP BY, CTEs e funções de janela.</p>
+                <a class="btn" href="https://www.youtube.com/results?search_query=sql+para+analise+de+dados" target="_blank">Estudar</a>
+            </div>
+        </div>
+
+        <div class="connector"></div>
+
+        <div class="children">
+            <div class="card yellow">
+                <h3>3. Power BI</h3>
+                <p>Modelagem, relacionamentos, visuais, filtros e publicação.</p>
+                <a class="btn" href="https://www.youtube.com/results?search_query=power+bi+para+iniciantes" target="_blank">Estudar</a>
+            </div>
+
+            <div class="card orange">
+                <h3>4. DAX</h3>
+                <p>CALCULATE, medidas, contexto de filtro e indicadores.</p>
+                <a class="btn" href="https://www.youtube.com/results?search_query=dax+power+bi+calculate+contexto+de+filtro" target="_blank">Estudar</a>
+            </div>
+
+            <div class="card purple">
+                <h3>5. Storytelling</h3>
+                <p>Transformar números em explicações úteis para o negócio.</p>
+                <a class="btn" href="https://www.youtube.com/results?search_query=storytelling+com+dados" target="_blank">Estudar</a>
+            </div>
+        </div>
+
     </div>
-    """
+    """, unsafe_allow_html=True)
 
-    with cols[i % 2]:
-        st.markdown(card_html, unsafe_allow_html=True)
+with aba3:
+    st.markdown("""
+    <div class="roadmap">
 
-st.divider()
+        <div class="phase">
+            <h2>⚙️ Roadmap Engenheiro de Dados</h2>
+            <p>Foco em estrutura, pipelines, bancos, qualidade e integração de dados.</p>
+        </div>
 
-tab1, tab2, tab3 = st.tabs(["🚀 Projetos", "📌 Como usar", "🌐 Publicação"])
+        <div class="connector"></div>
 
-with tab1:
-    st.subheader("Projetos para colocar no portfólio")
-    st.write("""
-    - Dashboard de indicadores comerciais ou financeiros  
-    - Auditoria entre dois sistemas  
-    - Pipeline simples com Python e Pandas  
-    - App em Streamlit com filtros e cards  
-    - Documentação automática de modelo Power BI  
-    """)
+        <div class="children">
+            <div class="card green">
+                <h3>1. SQL Forte</h3>
+                <p>Consultas avançadas, performance, índices e otimização.</p>
+                <a class="btn" href="https://www.youtube.com/results?search_query=sql+avancado+performance" target="_blank">Estudar</a>
+            </div>
 
-with tab2:
-    st.subheader("Como estudar")
-    st.write("""
-    Use as fases em ordem.  
-    Primeiro fortaleça SQL e modelagem, depois avance para BI, Engenharia, Python e Portfólio.
-    """)
+            <div class="card">
+                <h3>2. Python</h3>
+                <p>Pandas, requests, APIs, JSON e automações.</p>
+                <a class="btn" href="https://www.youtube.com/results?search_query=python+pandas+api+dados" target="_blank">Estudar</a>
+            </div>
+        </div>
 
-with tab3:
-    st.subheader("Como publicar")
-    st.write("""
-    Para publicar grátis, suba este projeto no GitHub e conecte o repositório no Streamlit Community Cloud.
-    """)
+        <div class="connector"></div>
+
+        <div class="children">
+            <div class="card orange">
+                <h3>3. ETL / ELT</h3>
+                <p>Extração, transformação, carga, logs e tratamento de erros.</p>
+                <a class="btn" href="https://www.youtube.com/results?search_query=etl+elt+engenharia+de+dados" target="_blank">Estudar</a>
+            </div>
+
+            <div class="card purple">
+                <h3>4. Data Warehouse</h3>
+                <p>Staging, fato, dimensão, granularidade e camadas de dados.</p>
+                <a class="btn" href="https://www.youtube.com/results?search_query=data+warehouse+fato+dimensao" target="_blank">Estudar</a>
+            </div>
+
+            <div class="card yellow">
+                <h3>5. Cloud</h3>
+                <p>Data Lake, orquestração, deploy e serviços em nuvem.</p>
+                <a class="btn" href="https://www.youtube.com/results?search_query=cloud+para+engenharia+de+dados" target="_blank">Estudar</a>
+            </div>
+        </div>
+
+    </div>
+    """, unsafe_allow_html=True)
