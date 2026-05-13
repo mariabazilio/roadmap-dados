@@ -246,23 +246,24 @@ with aba2:
 for etapa in etapas:
 
     st.markdown(f"""
-<div class="step">
-    <h2>{etapa["titulo"]}</h2>
-    <p>{etapa["descricao"]}</p>
-    <br>
-</div>
-""", unsafe_allow_html=True)
+    <div class="step">
+        <h2>{etapa["titulo"]}</h2>
+        <p>{etapa["descricao"]}</p>
+    </div>
+    """, unsafe_allow_html=True)
 
-col1, col2, col3 = st.columns(3)
+    col1, col2, col3 = st.columns(3)
 
-with col1:
-    st.link_button("📖", etapa["link_1"])
+    with col1:
+        st.link_button("📖 Conteúdo", etapa["link_1"])
 
-with col2:
-    st.link_button("🎥", etapa["link_2"])
+    with col2:
+        st.link_button("📚 Aprofundando", etapa["link_2"])
 
-with col3:
-    st.link_button("💻", etapa["link_3"])
+    with col3:
+        st.link_button("💻 Na prática", etapa["link_2"])
+
+    st.markdown('<div class="arrow">↓</div>', unsafe_allow_html=True)
 
 # Analista
 with aba3:
