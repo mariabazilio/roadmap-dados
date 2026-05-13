@@ -196,7 +196,6 @@ with aba1:
         )
 
 # conceitos
-# conceitos
 with aba2:
 
     st.title("📈 Conceitos primordiais")
@@ -204,17 +203,33 @@ with aba2:
     etapas = [
         {
             "titulo": "1. Banco de Dados (SGBDS, Conceitos fundamentais e Modelagem)",
-            "descricao": "Ao fim desta etapa, você saberá o que é um banco de dados...",
+            "descricao": "Ao fim desta etapa, você saberá o que é um banco de dados, a diferença entre bancos x sgbds, relacionamentos e implementação/instalação de um banco real",
             "link_1": "https://www.ev.org.br/trilhas-de-conhecimento/banco-de-dados",
             "link_2": "https://www.youtube.com/watch?v=yQkp1Eze400",
             "link_3": "https://www.youtube.com/watch?v=f4jWaYDsho8"
         },
         {
-            "titulo": "2. SQL",
-            "descricao": "Ao fim desta etapa, você deverá ter proficiência...",
+            "titulo": "2. SQL (Funções, Exercícios e demais questões)",
+            "descricao": "Ao fim desta etapa, você deverá ter proficiência e capacidade analítica para construção de querys",
             "link_1": "https://www.youtube.com/watch?v=G7bMwefn8RQ",
             "link_2": "https://www.w3schools.com/sql/default.asp",
             "link_3": "https://colab.research.google.com/"
+        },
+        {
+            "titulo": "3. Datawarehouse (Fatos, dimensões e relacionamentos)",
+            "descricao": "Ao fim desta etapa, você deverá saber definir um DataWarehouse, diferenciar dimensões e fatos e aplicar relacionamentos corretamente",
+            "link_1": "https://www.youtube.com/watch?v=DDKjB2KeXNw&t=1651s",
+            "link_2": "https://www.youtube.com/watch?v=kRSykGdHv48",
+            "link_3": "https://github.com/mariabazilio/roadmap-dados/blob/main/exercicios_modelagem_dados_v2.pdf"
+            
+        },
+        
+        {
+            "titulo": "3. GitLab",
+            "descricao": "Ao fim desta etapa, você terá domínio no gerenciamento de tarefas,",
+            "link_1": "https://www.youtube.com/watch?v=un8CDE8qOR8",
+            "link_2": "https://zup.com.br/blog/git-github-e-gitlab/",
+            "link_3": "https://docs.gitlab.com/user/"
         }
     ]
 
