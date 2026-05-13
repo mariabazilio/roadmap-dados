@@ -113,7 +113,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-aba1, aba2, aba3, aba4 = st.tabs([
+aba1, aba2, aba3 = st.tabs([
     "Breve Histórico",
     "Conceitos iniciais",
     "Analista",
