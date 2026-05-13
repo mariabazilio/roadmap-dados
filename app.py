@@ -195,13 +195,12 @@ with aba1:
             item["link"]
         )
 
-        st.markdown("""
-        <div class="arrow">↓</div>
-        """, unsafe_allow_html=True)
+        #st.markdown("""
+        #<div class="arrow">↓</div>
+        #""", unsafe_allow_html=True)
 
-    st.caption(
-        "Base: 365 Data Science — The History of Data: From Ancient Times to Modern Day."
-    )
+    #st.caption(
+        #"Base: 365 Data Science — The History of Data: From Ancient Times to Modern Day."
 
 # conceitos
 with aba2:
