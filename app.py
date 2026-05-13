@@ -228,8 +228,8 @@ with aba2:
         {
             "titulo": "3. Datawarehouse (Fatos, dimensões e relacionamentos)",
             "descricao": "Ao fim desta etapa, você deverá saber definir um DataWarehouse, diferenciar dimensões e fatos e aplicar relacionamentos corretamente",
-            "link_1": "https://www.youtube.com/watch?v=DDKjB2KeXNw&t=1651s"
-            "link_2": "https://www.youtube.com/watch?v=kRSykGdHv48"
+            "link_1": "https://www.youtube.com/watch?v=DDKjB2KeXNw&t=1651s",
+            "link_2": "https://www.youtube.com/watch?v=kRSykGdHv48",
             "link_3": "https://github.com/mariabazilio/roadmap-dados/blob/main/exercicios_modelagem_dados_v2.pdf"
             
         },
@@ -237,8 +237,8 @@ with aba2:
         {
             "titulo": "3. GitLab",
             "descricao": "Ao fim desta etapa, você terá domínio no gerenciamento de tarefas,",
-            "link_1": "https://www.youtube.com/watch?v=un8CDE8qOR8"
-            "link_2": "https://zup.com.br/blog/git-github-e-gitlab/"
+            "link_1": "https://www.youtube.com/watch?v=un8CDE8qOR8",
+            "link_2": "https://zup.com.br/blog/git-github-e-gitlab/",
             "link_3": "https://docs.gitlab.com/user/"
         }
     ]
