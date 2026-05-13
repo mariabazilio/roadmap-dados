@@ -103,18 +103,16 @@ hr {
 </style>
 """, unsafe_allow_html=True)
 
-# ---------- HERO ----------
 st.markdown("""
 <div class="big-card">
-    <h1>🛢 Roadmap Dados</h1>
+    <h1>Trilha de aprendizado - Dados</h1>
     <p>
-    O passo a paso para quem deseja mergulhar na área e se tornar um
+    O passo a passo para quem deseja mergulhar na área e se tornar um
     Analista ou Engenheiro de Dados.
     </p>
 </div>
 """, unsafe_allow_html=True)
 
-# ---------- ABAS ----------
 aba1, aba2, aba3, aba4 = st.tabs([
     "Breve Histórico",
     "Conceitos iniciais",
@@ -122,10 +120,9 @@ aba1, aba2, aba3, aba4 = st.tabs([
     "Engenheiro"
 ])
 
-# Breve histótico sobre dados (surgimento e etc)
-
+#historico
 with aba1:
-    st.title("🏁 Introdução ao mundo dos dados")
+    st.title("Breve Histórico")
 
     st.markdown("""
     A história dos dados é muito mais antiga do que parece. Antes de bancos de dados,
@@ -225,8 +222,8 @@ with aba2:
         },
         
         {
-            "titulo": "3. GitLab",
-            "descricao": "Ao fim desta etapa, você terá domínio no gerenciamento de tarefas,",
+            "titulo": "3. GitLab (O que o distingue do Github e suas principais aplicações",
+            "descricao": "Ao fim desta etapa, você terá domínio no gerenciamento de tarefas, criação de tasks e demais funções",
             "link_1": "https://www.youtube.com/watch?v=un8CDE8qOR8",
             "link_2": "https://zup.com.br/blog/git-github-e-gitlab/",
             "link_3": "https://docs.gitlab.com/user/"
@@ -261,33 +258,41 @@ with aba3:
 
     etapas = [
         {
-            "titulo": "1. Fundamentos",
-            "descricao": "Excel, lógica, estatística e negócio",
-            "link": "https://www.youtube.com/results?search_query=excel+analise+de+dados"
+            "titulo": "1. Fundamentos (Power query, daxs  e excel)",
+             "descricao": "Ao fim desta etapa, você deverá dominar o uso de power query, manipulação de daxs e funções básicas do excel ,
+            "link_1": "",
+            "link_2": "",
+            "link_3": ""
         },
 
         {
-            "titulo": "2. SQL",
-            "descricao": "SELECT, JOIN, GROUP BY e CTE",
-            "link": "https://www.youtube.com/results?search_query=sql+analise+de+dados"
+            "titulo": "1. Fundamentos (Power query, Daxs  e excel)",
+             "descricao": "Ao fim desta etapa, você deverá dominar o uso de power query, manipulação de daxs e funções básicas do excel ,
+            "link_1": "",
+            "link_2": "",
+            "link_3": ""
         },
 
         {
-            "titulo": "3. Power BI",
+            "titulo": "3. Data Viz (Power bi, StreamLit, Metabase..",
             "descricao": "Dashboards, modelagem e KPIs",
-            "link": "https://www.youtube.com/results?search_query=power+bi+iniciante"
+            "link_1": "",
+            "link_2": "",
+            "link_3": ""
         },
 
         {
             "titulo": "4. DAX",
-            "descricao": "Medidas, CALCULATE e contexto",
-            "link": "https://www.youtube.com/results?search_query=dax+power+bi"
+            "link_1": "",
+            "link_2": "",
+            "link_3": ""
         },
 
         {
             "titulo": "5. Portfólio",
-            "descricao": "Projetos, GitHub e LinkedIn",
-            "link": "https://www.youtube.com/results?search_query=portfolio+dados"
+            "link_1": "",
+            "link_2": "",
+            "link_3": ""
         }
     ]
 
