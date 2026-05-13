@@ -305,11 +305,18 @@ with aba3:
         </div>
         """, unsafe_allow_html=True)
 
-        st.link_button("📚 Estudar", etapa["link"])
+        col1, col2, col3 = st.columns(3)
 
-        st.markdown("""
-        <div class="arrow">↓</div>
-        """, unsafe_allow_html=True)
+        with col1:
+            st.link_button("📖 Conteúdo", etapa["link_1"])
+
+        with col2:
+            st.link_button("📚 Aprofundando", etapa["link_2"])
+
+        with col3:
+            st.link_button("💻 Na prática", etapa["link_3"]) 
+
+        st.markdown('<div class="arrow">↓</div>', unsafe_allow_html=True)
         
 # Engenheiro
 with aba4:
@@ -320,31 +327,41 @@ with aba4:
         {
             "titulo": "1. Conceitos (ETL, ELT..)",
             "descricao": "Performance, índices e otimização",
-            "link": "https://www.youtube.com/results?search_query=sql+performance"
+            "link_1": "",
+            "link_2": "",
+            "link_3": ""
         },
 
         {
             "titulo": "2. Python",
             "descricao": "Pandas, APIs e automações",
-            "link": "https://www.youtube.com/results?search_query=python+dados"
+            "link_1": "",
+            "link_2": "",
+            "link_3": ""
         },
 
         {
             "titulo": "3. ETL / ELT",
             "descricao": "Pipelines e tratamento de dados",
-            "link": "https://www.youtube.com/results?search_query=etl+engenharia+de+dados"
+            "link_1": "",
+            "link_2": "",
+            "link_3": ""
         },
 
         {
             "titulo": "4. Data Warehouse",
             "descricao": "Fato, dimensão e staging",
-            "link": "https://www.youtube.com/results?search_query=data+warehouse"
+            "link_1": "",
+            "link_2": "",
+            "link_3": ""
         },
 
         {
             "titulo": "5. Cloud",
             "descricao": "Azure, AWS e Data Lake",
-            "link": "https://www.youtube.com/results?search_query=cloud+dados"
+            "link_1": "",
+            "link_2": "",
+            "link_3": ""
         }
     ]
 
@@ -357,8 +374,15 @@ with aba4:
         </div>
         """, unsafe_allow_html=True)
 
-        st.link_button("📚 Estudar", etapa["link"])
+        col1, col2, col3 = st.columns(3)
 
-        st.markdown("""
-        <div class="arrow">↓</div>
-        """, unsafe_allow_html=True)
+        with col1:
+            st.link_button("📖 Conteúdo", etapa["link_1"])
+
+        with col2:
+            st.link_button("📚 Aprofundando", etapa["link_2"])
+
+        with col3:
+            st.link_button("💻 Na prática", etapa["link_3"]) 
+
+        st.markdown('<div class="arrow">↓</div>', unsafe_allow_html=True)
