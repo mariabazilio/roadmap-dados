@@ -195,13 +195,7 @@ with aba1:
             item["link"]
         )
 
-        #st.markdown("""
-        #<div class="arrow">↓</div>
-        #""", unsafe_allow_html=True)
-
-    #st.caption(
-        #"Base: 365 Data Science — The History of Data: From Ancient Times to Modern Day."
-
+# conceitos
 # conceitos
 with aba2:
 
@@ -209,60 +203,43 @@ with aba2:
 
     etapas = [
         {
-            "titulo": "1. Banco de Dados (SGBDS, Conceitos fundamentais e Modelagem) ",
-            "descricao": "Ao fim desta etapa, você saberá o que é um banco de dados, a diferença entre bancos x sgbds, relacionamentos e implementação/instalação de um banco real",
-            "link_1": "https://www.ev.org.br/trilhas-de-conhecimento/banco-de-dados", #curso
-            "link_2": "https://www.youtube.com/watch?v=yQkp1Eze400", #video
-            "link_3": "https://www.youtube.com/watch?v=f4jWaYDsho8&list=PLUlj6caFdTicjeiv_KbvZwNu-kHr3PdYQ" #ex
+            "titulo": "1. Banco de Dados (SGBDS, Conceitos fundamentais e Modelagem)",
+            "descricao": "Ao fim desta etapa, você saberá o que é um banco de dados...",
+            "link_1": "https://www.ev.org.br/trilhas-de-conhecimento/banco-de-dados",
+            "link_2": "https://www.youtube.com/watch?v=yQkp1Eze400",
+            "link_3": "https://www.youtube.com/watch?v=f4jWaYDsho8"
         },
-
         {
-            "titulo": "2. SQL (Funções, Exercícios e demais questões)",
-            "descricao": "Ao fim desta etapa, você deverá ter proficiência e capacidade analítica para construção de querys",
-            "link_1": "https://www.youtube.com/watch?v=G7bMwefn8RQ&list=PLzM1eLzsi581qxhntz3abSAZUC5C3W19L",
+            "titulo": "2. SQL",
+            "descricao": "Ao fim desta etapa, você deverá ter proficiência...",
+            "link_1": "https://www.youtube.com/watch?v=G7bMwefn8RQ",
             "link_2": "https://www.w3schools.com/sql/default.asp",
-            "link_3": " https://colab.research.google.com/drive/1_X-KgO7pNk_VU2w52FVcyHsSCjRLnsiE?usp=sharing"
-        },
-        
-        {
-            "titulo": "3. Datawarehouse (Fatos, dimensões e relacionamentos)",
-            "descricao": "Ao fim desta etapa, você deverá saber definir um DataWarehouse, diferenciar dimensões e fatos e aplicar relacionamentos corretamente",
-            "link_1": "https://www.youtube.com/watch?v=DDKjB2KeXNw&t=1651s",
-            "link_2": "https://www.youtube.com/watch?v=kRSykGdHv48",
-            "link_3": "https://github.com/mariabazilio/roadmap-dados/blob/main/exercicios_modelagem_dados_v2.pdf"
-            
-        },
-        
-        {
-            "titulo": "3. GitLab",
-            "descricao": "Ao fim desta etapa, você terá domínio no gerenciamento de tarefas,",
-            "link_1": "https://www.youtube.com/watch?v=un8CDE8qOR8",
-            "link_2": "https://zup.com.br/blog/git-github-e-gitlab/",
-            "link_3": "https://docs.gitlab.com/user/"
+            "link_3": "https://colab.research.google.com/"
         }
     ]
-#botoes
-for etapa in etapas:
 
-    st.markdown(f"""
-    <div class="step">
-        <h2>{etapa["titulo"]}</h2>
-        <p>{etapa["descricao"]}</p>
-    </div>
-    """, unsafe_allow_html=True)
+    # ✅ AGORA DENTRO DA ABA
+    for etapa in etapas:
 
-    col1, col2, col3 = st.columns(3)
+        st.markdown(f"""
+        <div class="step">
+            <h2>{etapa["titulo"]}</h2>
+            <p>{etapa["descricao"]}</p>
+        </div>
+        """, unsafe_allow_html=True)
 
-    with col1:
-        st.link_button("📖 Conteúdo", etapa["link_1"])
+        col1, col2, col3 = st.columns(3)
 
-    with col2:
-        st.link_button("📚 Aprofundando", etapa["link_2"])
+        with col1:
+            st.link_button("📖 Conteúdo", etapa["link_1"])
 
-    with col3:
-        st.link_button("💻 Na prática", etapa["link_2"])
+        with col2:
+            st.link_button("📚 Aprofundando", etapa["link_2"])
 
-    st.markdown('<div class="arrow">↓</div>', unsafe_allow_html=True)
+        with col3:
+            st.link_button("💻 Na prática", etapa["link_3"])  # ⚠️ você tava repetindo link_2 aqui
+
+        st.markdown('<div class="arrow">↓</div>', unsafe_allow_html=True)
 
 # Analista
 with aba3:
