@@ -241,6 +241,7 @@ with aba2:
             "link_2": "https://zup.com.br/blog/git-github-e-gitlab/",
             "link_3": "https://docs.gitlab.com/user/"
         }
+    ]
 #botoes
 for etapa in etapas:
 
@@ -261,7 +262,7 @@ with col2:
     st.link_button("🎥", etapa["link_2"])
 
 with col3:
-    st.link_button("💻", etapa["link_3"]) ]
+    st.link_button("💻", etapa["link_3"])
 
 # Analista
 with aba3:
