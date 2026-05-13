@@ -195,7 +195,7 @@ with aba1:
 # conceitos
 with aba2:
 
-    st.title("📈 Conceitos")
+    st.title("Conceitos")
 
     etapas = [
         {
