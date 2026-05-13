@@ -295,7 +295,6 @@ with aba3:
             "link_3": ""
         }
     ]
-
     for etapa in etapas:
 
         st.markdown(f"""
@@ -304,9 +303,7 @@ with aba3:
             <p>{etapa["descricao"]}</p>
         </div>
         """, unsafe_allow_html=True)
-
         col1, col2, col3 = st.columns(3)
-
         with col1:
             st.link_button("📖 Conteúdo", etapa["link_1"])
 
