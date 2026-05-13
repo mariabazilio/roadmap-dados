@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Roadmap Dados",
+    page_title="Trilha de aprendizado - Dados",
     layout="wide"
 )
 
@@ -198,7 +198,7 @@ with aba1:
 # conceitos
 with aba2:
 
-    st.title("📈 Conceitos primordiais")
+    st.title("📈 Conceitos")
 
     etapas = [
         {
@@ -232,8 +232,6 @@ with aba2:
             "link_3": "https://docs.gitlab.com/user/"
         }
     ]
-
-    # ✅ AGORA DENTRO DA ABA
     for etapa in etapas:
 
         st.markdown(f"""
@@ -252,14 +250,14 @@ with aba2:
             st.link_button("📚 Aprofundando", etapa["link_2"])
 
         with col3:
-            st.link_button("💻 Na prática", etapa["link_3"])  # ⚠️ você tava repetindo link_2 aqui
+            st.link_button("💻 Na prática", etapa["link_3"]) 
 
         st.markdown('<div class="arrow">↓</div>', unsafe_allow_html=True)
 
-# Analista
+# analista
 with aba3:
 
-    st.title("📈 Roadmap Analista de Dados")
+    st.title("Roadmap Analista de Dados")
 
     etapas = [
         {
@@ -311,11 +309,11 @@ with aba3:
 # Engenheiro
 with aba4:
 
-    st.title("⚙️ Roadmap Engenheiro de Dados")
+    st.title("Roadmap Engenheiro de Dados")
 
     etapas = [
         {
-            "titulo": "1. SQL Forte",
+            "titulo": "1. Conceitos (ETL, ELT..)",
             "descricao": "Performance, índices e otimização",
             "link": "https://www.youtube.com/results?search_query=sql+performance"
         },
