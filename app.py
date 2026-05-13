@@ -6,7 +6,7 @@ st.set_page_config(
 )
 
 # css
-# na ordem dos steps vem fundo, titulo, formatacao do texto, card principal, card de cada step, hover, setas, botoes, hover do botao, aba, sidebar, linha de separacao
+# ordem dos steps vem fundo, titulo, formatacao do texto, card principal, card de cada step, hover, setas, botoes, hover do botao, aba, sidebar, linha de separacao
 st.markdown("""
 <style>
 
@@ -106,7 +106,7 @@ hr {
 # ---------- HERO ----------
 st.markdown("""
 <div class="big-card">
-    <h1>📊 Roadmap Dados</h1>
+    <h1>🛢 Roadmap Dados</h1>
     <p>
     O passo a paso para quem deseja mergulhar na área e se tornar um
     Analista ou Engenheiro de Dados.
@@ -146,14 +146,14 @@ with aba1:
         },
 
         {
-            "ano": "1640s",
+            "ano": "1640",
             "titulo": "Estatísticas de saúde pública",
             "texto": "John Graunt coletou dados sobre mortes em Londres, analisando causas, idade e mortalidade.",
             "link": "https://en.wikipedia.org/wiki/John_Graunt"
         },
 
         {
-            "ano": "1880s",
+            "ano": "1880",
             "titulo": "A Gênese do processamento de dados",
             "texto": "Herman Hollerith criou máquinas com cartões perfurados para acelerar o processamento do censo.",
             "link": "https://en.wikipedia.org/wiki/Herman_Hollerith"
@@ -167,14 +167,14 @@ with aba1:
         },
 
         {
-            "ano": "1960s",
+            "ano": "1960",
             "titulo": "Os primórdios do banco de dados relacional",
             "texto": "Edgar Codd propôs o modelo relacional, base para tabelas com linhas e colunas.",
             "link": "https://en.wikipedia.org/wiki/Edgar_F._Codd"
         },
 
         {
-            "ano": "1990s até hoje",
+            "ano": "1990 até hoje",
             "titulo": "Internet, Big Data e IA",
             "texto": "Com a internet, Google, Big Data, Machine Learning e IA, os dados passaram a ser gerados e usados em escala massiva.",
             "link": "https://www.ibm.com/topics/big-data"
@@ -191,7 +191,7 @@ with aba1:
         """, unsafe_allow_html=True)
 
         st.link_button(
-            "📚 Saiba mais",
+            "📖 Saiba mais",
             item["link"]
         )
 
@@ -203,81 +203,67 @@ with aba1:
         "Base: 365 Data Science — The History of Data: From Ancient Times to Modern Day."
     )
 
-    st.markdown("""
-    ## ⚖️ Analista x Engenheiro de Dados
-
-    ### 📈 Analista de Dados 
-    Seu dia a dia:
-    - Desenvolvimento de dashboards
-    - Contato direto com usuários e stakeholders para enteidmento de processo
-    - Geração de insights
-    - Análise de regras de negócio
-
-    ### ⚙️ Engenheiro de Dados
-    Seu dia a dia:
-    - Construção de pipelines ara ETL/ELT
-    - Integração com as mais diversas aplicações
-    """)
-
-# Conceitos gerais comuns para as duas profissões
+# conceitos
 with aba2:
 
-    st.title("📈 Conceitos primordiais para entrada no mercado")
+    st.title("📈 Conceitos primordiais")
 
     etapas = [
         {
             "titulo": "1. Banco de Dados (SGBDS, Conceitos fundamentais e Modelagem) ",
             "descricao": "Ao fim desta etapa, você saberá o que é um banco de dados, a diferença entre bancos x sgbds, relacionamentos e implementação/instalação de um banco real",
-            "link": "https://www.ev.org.br/trilhas-de-conhecimento/banco-de-dados",
-            "link": "https://www.youtube.com/watch?v=yQkp1Eze400"
+            "link_1": "https://www.ev.org.br/trilhas-de-conhecimento/banco-de-dados", #curso
+            "link_2": "https://www.youtube.com/watch?v=yQkp1Eze400", #video
+            "link_3": "https://www.youtube.com/watch?v=f4jWaYDsho8&list=PLUlj6caFdTicjeiv_KbvZwNu-kHr3PdYQ" #ex
         },
 
         {
             "titulo": "2. SQL (Funções, Exercícios e demais questões)",
             "descricao": "Ao fim desta etapa, você deverá ter proficiência e capacidade analítica para construção de querys",
-            "link": "https://www.youtube.com/watch?v=G7bMwefn8RQ&list=PLzM1eLzsi581qxhntz3abSAZUC5C3W19L",
-            "link": "https://www.w3schools.com/sql/default.asp",
+            "link_1": "https://www.youtube.com/watch?v=G7bMwefn8RQ&list=PLzM1eLzsi581qxhntz3abSAZUC5C3W19L",
+            "link_2": "https://www.w3schools.com/sql/default.asp",
+            "link_3": " https://colab.research.google.com/drive/1_X-KgO7pNk_VU2w52FVcyHsSCjRLnsiE?usp=sharing"
         },
         
         {
             "titulo": "3. Datawarehouse (Fatos, dimensões e relacionamentos)",
-            "descricao": "Dashboards, modelagem e KPIs",
-            "link": "https://www.youtube.com/results?search_query=power+bi+iniciante"
+            "descricao": "Ao fim desta etapa, você deverá saber definir um DataWarehouse, diferenciar dimensões e fatos e aplicar relacionamentos corretamente",
+            "link_1": "https://www.youtube.com/watch?v=DDKjB2KeXNw&t=1651s"
+            "link_2": "https://www.youtube.com/watch?v=kRSykGdHv48"
+            "link_3": "https://github.com/mariabazilio/roadmap-dados/blob/main/exercicios_modelagem_dados_v2.pdf"
+            
         },
         
         {
-            "titulo": "3. Power BI",
-            "descricao": "Dashboards, modelagem e KPIs",
-            "link": "https://www.youtube.com/results?search_query=power+bi+iniciante"
-        },
-
-        {
-            "titulo": "4. DAX",
-            "descricao": "Medidas, CALCULATE e contexto",
-            "link": "https://www.youtube.com/results?search_query=dax+power+bi"
-        },
-
-        {
-            "titulo": "5. Portfólio",
-            "descricao": "Projetos, GitHub e LinkedIn",
-            "link": "https://www.youtube.com/results?search_query=portfolio+dados"
+            "titulo": "3. GitLab",
+            "descricao": "Ao fim desta etapa, você terá domínio no gerenciamento de tarefas,",
+            "link_1": "https://www.youtube.com/watch?v=un8CDE8qOR8"
+            "link_2": "https://zup.com.br/blog/git-github-e-gitlab/"
+            "link_3": "https://docs.gitlab.com/user/"
         }
     ]
+#botoes
+for etapa in etapas:
 
-    for etapa in etapas:
+    st.markdown(f"""
+    <div class="step">
+        <h2>{etapa["titulo"]}</h2>
+        <p>{etapa["descricao"]}</p>
+    </div>
+    """, unsafe_allow_html=True)
 
-        st.markdown(f"""
-        <div class="step">
-            <h2>{etapa["titulo"]}</h2>
-            <p>{etapa["descricao"]}</p>
-        </div>
-        """, unsafe_allow_html=True)
+    col1, col2, col3 = st.columns(3)
 
-        st.link_button("📚 Estudar", etapa["link"])
+    with col1:
+        st.link_button("📖 Conteúdo", etapa["link_1"])
 
-        st.markdown("""
-        <div class="arrow">↓</div>
-        """, unsafe_allow_html=True)
+    with col2:
+        st.link_button("📚 Aprofundando", etapa["link_2"])
+
+    with col3:
+        st.link_button("💻 Na prática", etapa["link_2"])
+
+    st.markdown('<div class="arrow">↓</div>', unsafe_allow_html=True)
 
 # Analista
 with aba3:
