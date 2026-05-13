@@ -108,7 +108,7 @@ st.markdown("""
 <div class="big-card">
     <h1>📊 Roadmap Dados</h1>
     <p>
-    O Beabá para quem deseja mergulhar na área e se tornar um
+    O passo a paso para quem deseja mergulhar na área e se tornar um
     Analista ou Engenheiro de Dados.
     </p>
 </div>
@@ -116,10 +116,10 @@ st.markdown("""
 
 # ---------- ABAS ----------
 aba1, aba2, aba3, aba4 = st.tabs([
-    "🏁 Breve Histórico",
-    "🛠️ Conceitos iniciais",
-    "📈 Analista",
-    "⚙️ Engenheiro"
+    "Breve Histórico",
+    "Conceitos iniciais",
+    "Analista",
+    "Engenheiro"
 ])
 
 # Breve histótico sobre dados (surgimento e etc)
@@ -129,10 +129,10 @@ with aba1:
 
     st.markdown("""
     A história dos dados é muito mais antiga do que parece. Antes de bancos de dados,
-    dashboards e inteligência artificial, as pessoas já registravam informações para contar,
+    dashboards e ia, as pessoas já registravam informações para contar,
     organizar e tomar decisões.
     
-    Segundo a 365 Data Science, há evidências de registros desde **19.000 a.C.**, passando por
+    Há evidências de registros desde **19.000 a.C.**, passando por
     estatísticas de saúde pública, cartões perfurados, armazenamento magnético, bancos relacionais
     e a era da internet. 
     """)
@@ -154,7 +154,7 @@ with aba1:
 
         {
             "ano": "1880s",
-            "titulo": "Processamento de dados",
+            "titulo": "A Gênese do processamento de dados",
             "texto": "Herman Hollerith criou máquinas com cartões perfurados para acelerar o processamento do censo.",
             "link": "https://en.wikipedia.org/wiki/Herman_Hollerith"
         },
@@ -168,7 +168,7 @@ with aba1:
 
         {
             "ano": "1960s",
-            "titulo": "Banco de dados relacional",
+            "titulo": "Os primórdios do banco de dados relacional",
             "texto": "Edgar Codd propôs o modelo relacional, base para tabelas com linhas e colunas.",
             "link": "https://en.wikipedia.org/wiki/Edgar_F._Codd"
         },
@@ -200,46 +200,51 @@ with aba1:
         """, unsafe_allow_html=True)
 
     st.caption(
-        "Fonte-base: 365 Data Science — The History of Data: From Ancient Times to Modern Day."
+        "Base: 365 Data Science — The History of Data: From Ancient Times to Modern Day."
     )
 
     st.markdown("""
     ## ⚖️ Analista x Engenheiro de Dados
 
-    ### 📈 Analista de Dados
-    Trabalha com:
-    - dashboards
-    - indicadores
-    - insights
-    - análise de negócio
+    ### 📈 Analista de Dados 
+    Seu dia a dia:
+    - Desenvolvimento de dashboards
+    - Contato direto com usuários e stakeholders para enteidmento de processo
+    - Geração de insights
+    - Análise de regras de negócio
 
     ### ⚙️ Engenheiro de Dados
-    Trabalha com:
-    - pipelines
-    - bancos de dados
-    - ETL
-    - integração
-    - infraestrutura de dados
+    Seu dia a dia:
+    - Construção de pipelines ara ETL/ELT
+    - Integração com as mais diversas aplicações
     """)
 
-# Conceitos gerais comuns pras duas profissões
+# Conceitos gerais comuns para as duas profissões
 with aba2:
 
     st.title("📈 Conceitos primordiais para entrada no mercado")
 
     etapas = [
         {
-            "titulo": "1. Fundamentos",
-            "descricao": "Excel, lógica, estatística e negócio",
-            "link": "https://www.youtube.com/results?search_query=excel+analise+de+dados"
+            "titulo": "1. Banco de Dados (SGBDS, Conceitos fundamentais e Modelagem) ",
+            "descricao": "Ao fim desta etapa, você saberá o que é um banco de dados, a diferença entre bancos x sgbds, relacionamentos e implementação/instalação de um banco real",
+            "link": "https://www.ev.org.br/trilhas-de-conhecimento/banco-de-dados",
+            "link": "https://www.youtube.com/watch?v=yQkp1Eze400"
         },
 
         {
-            "titulo": "2. SQL",
-            "descricao": "SELECT, JOIN, GROUP BY e CTE",
-            "link": "https://www.youtube.com/results?search_query=sql+analise+de+dados"
+            "titulo": "2. SQL (Funções, Exercícios e demais questões"),
+            "descricao": "Ao fim desta etapa, você deverá ter proficiência e capacidade analítica para construção de querys",
+            "link": "https://www.youtube.com/watch?v=G7bMwefn8RQ&list=PLzM1eLzsi581qxhntz3abSAZUC5C3W19L",
+            "link": "https://www.w3schools.com/sql/default.asp",
         },
-
+        
+        {
+            "titulo": "3. Datawarehouse (Fatos, dimensões e relacionamentos)",
+            "descricao": "Dashboards, modelagem e KPIs",
+            "link": "https://www.youtube.com/results?search_query=power+bi+iniciante"
+        },
+        
         {
             "titulo": "3. Power BI",
             "descricao": "Dashboards, modelagem e KPIs",
