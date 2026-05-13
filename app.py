@@ -233,7 +233,7 @@ with aba2:
         },
 
         {
-            "titulo": "2. SQL (Funções, Exercícios e demais questões"),
+            "titulo": "2. SQL (Funções, Exercícios e demais questões)",
             "descricao": "Ao fim desta etapa, você deverá ter proficiência e capacidade analítica para construção de querys",
             "link": "https://www.youtube.com/watch?v=G7bMwefn8RQ&list=PLzM1eLzsi581qxhntz3abSAZUC5C3W19L",
             "link": "https://www.w3schools.com/sql/default.asp",
