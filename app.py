@@ -5,7 +5,7 @@ st.set_page_config(
     layout="wide"
 )
 
-# ---------------- CSS CLEAN ----------------
+# ---------------- CSS ----------------
 st.markdown("""
 <style>
 
@@ -17,75 +17,97 @@ st.markdown("""
 /* TITULOS */
 h1, h2, h3 {
     color: #e2e8f0;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 /* TEXTO */
 p {
     color: #94a3b8;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 /* HERO */
-.big-card {
+.hero {
     background: rgba(30, 41, 59, 0.6);
     padding: 25px;
     border-radius: 18px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
-/* CARDS */
-.step {
-    background: rgba(30, 41, 59, 0.6);
-    padding: 16px;
+/* TIMELINE */
+.timeline {
+    position: relative;
+    margin: 40px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: #334155;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+}
+
+/* CONTAINER */
+.container-tl {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+}
+
+.left { left: 0; }
+.right { left: 50%; }
+
+/* CARD */
+.content {
+    background: rgba(30, 41, 59, 0.7);
+    padding: 18px;
     border-radius: 14px;
-    border-left: 3px solid #84cc16;
-    margin-bottom: 14px;
-    transition: 0.2s;
-}
-
-.step:hover {
-    transform: translateY(-2px);
-    border-left: 3px solid #22c55e;
-}
-
-/* TITULO CARD */
-.step h2 {
-    font-size: 18px;
-    margin-bottom: 6px;
+    border: 1px solid #334155;
 }
 
 /* TEXTO CARD */
-.step p {
+.content p {
     font-size: 14px;
 }
 
-/* SETA */
-.arrow {
-    text-align: center;
-    font-size: 22px;
-    color: #64748b;
-    opacity: 0.6;
+/* BOLINHA */
+.container-tl::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: -8px;
+    background-color: #84cc16;
+    border: 3px solid #0f172a;
+    top: 20px;
+    border-radius: 50%;
 }
 
-/* BOTÕES */
-.stLinkButton a {
-    background-color: #84cc16 !important;
-    color: #020617 !important;
-    border-radius: 999px !important;
-    padding: 6px 14px !important;
-    font-size: 13px !important;
-    font-weight: 600 !important;
+.right::after {
+    left: -8px;
 }
 
-.stLinkButton a:hover {
-    background-color: #a3e635 !important;
+/* BOTÃO */
+.btn-tl {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 14px;
+    background-color: #84cc16;
+    color: #020617;
+    border-radius: 999px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-tl:hover {
+    background-color: #a3e635;
 }
 
 /* ABAS */
 button[data-baseweb="tab"] {
     color: #cbd5e1;
-    font-weight: 600;
 }
 
 button[data-baseweb="tab"][aria-selected="true"] {
@@ -97,131 +119,100 @@ button[data-baseweb="tab"][aria-selected="true"] {
 
 # ---------------- HERO ----------------
 st.markdown("""
-<div class="big-card">
-    <h1>🛢 Roadmap Dados</h1>
-    <p>Guia prático para se tornar Analista ou Engenheiro de Dados</p>
+<div class="hero">
+    <h1>🛢 Roadmap de Dados</h1>
+    <p>Explore o caminho para se tornar Analista ou Engenheiro de Dados</p>
 </div>
 """, unsafe_allow_html=True)
 
 # ---------------- ABAS ----------------
 aba1, aba2, aba3, aba4 = st.tabs([
-    "Histórico",
+    "Introdução",
     "Conceitos",
     "Analista",
     "Engenheiro"
 ])
 
-# ---------------- HISTÓRICO ----------------
+# ---------------- INTRODUÇÃO ----------------
 with aba1:
 
-    st.title("🏁 Introdução")
+    st.title("🏁 Introdução ao mundo dos dados")
 
-    timeline = [
-        {"ano": "19.000 a.C.", "titulo": "Primeiros registros"},
-        {"ano": "1640", "titulo": "Estatísticas"},
-        {"ano": "1880", "titulo": "Cartões perfurados"},
-        {"ano": "1928", "titulo": "Fita magnética"},
-        {"ano": "1960", "titulo": "Modelo relacional"},
-        {"ano": "Hoje", "titulo": "Big Data & IA"},
-    ]
+    texto_intro = st.text_area(
+        "✍️ Edite a introdução:",
+        """Os dados evoluíram desde registros primitivos até Big Data e Inteligência Artificial.
 
-    for item in timeline:
-        st.markdown(f"""
-        <div class="step">
-            <h2>{item["ano"]} — {item["titulo"]}</h2>
+Hoje, são fundamentais para tomada de decisão nas empresas e impulsionam inovação.
+
+Neste roadmap, você verá o caminho completo para se tornar um profissional de dados."""
+    )
+
+    st.markdown(f"""
+    <div class="content">
+        <p>{texto_intro}</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+# ---------------- FUNÇÃO TIMELINE ----------------
+def render_timeline(etapas):
+
+    html = '<div class="timeline">'
+
+    for i, e in enumerate(etapas):
+        side = "left" if i % 2 == 0 else "right"
+
+        html += f"""
+        <div class="container-tl {side}">
+            <div class="content">
+                <h3>{e["titulo"]}</h3>
+                <p>{e["desc"]}</p>
+                <a class="btn-tl" href="{e["link"]}" target="_blank">Saiba mais</a>
+            </div>
         </div>
-        """, unsafe_allow_html=True)
+        """
 
-        st.markdown('<div class="arrow">↓</div>', unsafe_allow_html=True)
+    html += "</div>"
+
+    st.markdown(html, unsafe_allow_html=True)
 
 # ---------------- CONCEITOS ----------------
 with aba2:
 
-    st.title("📈 Conceitos")
+    st.title("📈 Conceitos Fundamentais")
 
     etapas = [
-        {
-            "titulo": "1. Banco de Dados",
-            "descricao": "SGBDs, modelagem e conceitos fundamentais",
-            "link_1": "https://www.ev.org.br",
-            "link_2": "https://youtube.com",
-            "link_3": "https://youtube.com"
-        },
-        {
-            "titulo": "2. SQL",
-            "descricao": "Queries, joins e análise",
-            "link_1": "https://youtube.com",
-            "link_2": "https://w3schools.com",
-            "link_3": "https://colab.research.google.com"
-        },
-        {
-            "titulo": "3. Data Warehouse",
-            "descricao": "Fatos, dimensões e modelagem",
-            "link_1": "https://youtube.com",
-            "link_2": "https://youtube.com",
-            "link_3": "https://github.com"
-        },
-        {
-            "titulo": "4. GitLab",
-            "descricao": "Gestão de tarefas e versionamento",
-            "link_1": "https://youtube.com",
-            "link_2": "https://docs.gitlab.com",
-            "link_3": "https://docs.gitlab.com"
-        }
+        {"titulo": "Banco de Dados", "desc": "Modelagem, SGBDs e conceitos básicos", "link": "https://www.ev.org.br"},
+        {"titulo": "SQL", "desc": "Consultas, joins e manipulação de dados", "link": "https://w3schools.com"},
+        {"titulo": "Data Warehouse", "desc": "Fato, dimensão e ETL", "link": "https://youtube.com"},
+        {"titulo": "GitLab", "desc": "Versionamento e gestão de tarefas", "link": "https://docs.gitlab.com"}
     ]
 
-    for etapa in etapas:
-
-        st.markdown(f"""
-        <div class="step">
-            <h2>{etapa["titulo"]}</h2>
-            <p>{etapa["descricao"]}</p>
-        </div>
-        """, unsafe_allow_html=True)
-
-        col1, col2, col3 = st.columns(3)
-
-        with col1:
-            st.link_button("📖", etapa["link_1"])
-
-        with col2:
-            st.link_button("🎥", etapa["link_2"])
-
-        with col3:
-            st.link_button("💻", etapa["link_3"])
-
-        st.markdown('<div class="arrow">↓</div>', unsafe_allow_html=True)
+    render_timeline(etapas)
 
 # ---------------- ANALISTA ----------------
 with aba3:
 
-    st.title("📊 Analista de Dados")
+    st.title("📊 Roadmap Analista de Dados")
 
-    etapas = ["Fundamentos", "SQL", "Power BI", "DAX", "Portfólio"]
+    etapas = [
+        {"titulo": "Excel", "desc": "Base para análise de dados", "link": "#"},
+        {"titulo": "SQL", "desc": "Consulta e manipulação de dados", "link": "#"},
+        {"titulo": "Power BI", "desc": "Criação de dashboards", "link": "#"},
+        {"titulo": "DAX", "desc": "Cálculos e métricas avançadas", "link": "#"}
+    ]
 
-    for etapa in etapas:
-
-        st.markdown(f"""
-        <div class="step">
-            <h2>{etapa}</h2>
-        </div>
-        """, unsafe_allow_html=True)
-
-        st.markdown('<div class="arrow">↓</div>', unsafe_allow_html=True)
+    render_timeline(etapas)
 
 # ---------------- ENGENHEIRO ----------------
 with aba4:
 
-    st.title("⚙️ Engenheiro de Dados")
+    st.title("⚙️ Roadmap Engenheiro de Dados")
 
-    etapas = ["SQL Avançado", "Python", "ETL", "Data Warehouse", "Cloud"]
+    etapas = [
+        {"titulo": "Python", "desc": "Manipulação e processamento de dados", "link": "#"},
+        {"titulo": "ETL", "desc": "Construção de pipelines de dados", "link": "#"},
+        {"titulo": "Data Warehouse", "desc": "Modelagem e armazenamento", "link": "#"},
+        {"titulo": "Cloud", "desc": "AWS, Azure ou GCP", "link": "#"}
+    ]
 
-    for etapa in etapas:
-
-        st.markdown(f"""
-        <div class="step">
-            <h2>{etapa}</h2>
-        </div>
-        """, unsafe_allow_html=True)
-
-        st.markdown('<div class="arrow">↓</div>', unsafe_allow_html=True)
+    render_timeline(etapas)
