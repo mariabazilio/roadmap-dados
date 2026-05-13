@@ -259,37 +259,37 @@ with aba3:
     etapas = [
         {
             "titulo": "1. Fundamentos do Power Query (Uso e aplicações)",
-            "descricao": "Ao fim desta etapa, você deverá dominar o uso de power query, manipulação e suas funções básicas aplicadas ao dia a dia" ,
-            "link_1": "",
-            "link_2": "",
-            "link_3": ""
+            "descricao": "Ao fim desta etapa, você deverá dominar o uso de power query, manipulação e suas funções básicas aplicadas as ferramentas" ,
+            "link_1": "https://hub.asimov.academy/blog/power-query-o-que-e-como-usar/",
+            "link_2": "https://www.youtube.com/watch?v=SIbi152Vszg",
+            "link_3": "https://www.youtube.com/watch?v=s9uxsHmFNFg"
         },
 
         {
             "titulo": "1. Dax (Linguagem, construções e etc)",
             "descricao": "Ao fim desta etapa, você deverá dominar o uso de power query, manipulação de daxs e funções básicas do excel" ,
+            "link_1": "https://www.datacamp.com/pt/tutorial/power-bi-dax-tutorial-for-beginners",
+            "link_2": "https://www.youtube.com/watch?v=3UU42GuxCxk",
+            "link_3": "https://www.youtube.com/watch?v=KRSmvg8l9U8"
+        },
+
+        {
+            "titulo": "3. Data Viz (Power BI).",
+            "descricao": "Ao fim desta etapa, você saberá desenvolver um dashboard do 0 em Power Bi,
+            "link_1": "https://learn.microsoft.com/en-us/power-bi/report-server/install-report-server",
+            "link_2": "https://www.datascienceacademy.com.br/course/microsoft-power-bi-para-business-intelligence-e-data-science",
+            "link_3": "https://www.datascienceacademy.com.br/course/microsoft-power-bi-para-business-intelligence-e-data-science"
+        },
+
+        {
+            "titulo": "4. ?",
             "link_1": "",
             "link_2": "",
             "link_3": ""
         },
 
         {
-            "titulo": "3. Data Viz (Power bi, StreamLit, Metabase..",
-            "descricao": "Dashboards, modelagem e KPIs",
-            "link_1": "",
-            "link_2": "",
-            "link_3": ""
-        },
-
-        {
-            "titulo": "4. DAX",
-            "link_1": "",
-            "link_2": "",
-            "link_3": ""
-        },
-
-        {
-            "titulo": "5. Portfólio",
+            "titulo": "5. ?",
             "link_1": "",
             "link_2": "",
             "link_3": ""
