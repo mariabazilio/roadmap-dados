@@ -275,7 +275,7 @@ with aba3:
 
         {
             "titulo": "3. Data Viz (Power BI).",
-            "descricao": "Ao fim desta etapa, você saberá desenvolver um dashboard do 0 em Power Bi,
+            "descricao": "Ao fim desta etapa, você saberá desenvolver um dashboard do 0 em Power Bi",
             "link_1": "https://learn.microsoft.com/en-us/power-bi/report-server/install-report-server",
             "link_2": "https://www.datascienceacademy.com.br/course/microsoft-power-bi-para-business-intelligence-e-data-science",
             "link_3": "https://www.datascienceacademy.com.br/course/microsoft-power-bi-para-business-intelligence-e-data-science"
