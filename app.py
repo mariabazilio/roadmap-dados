@@ -258,15 +258,15 @@ with aba3:
 
     etapas = [
         {
-            "titulo": "1. Fundamentos (Power query, daxs  e excel)",
-            "descricao": "Ao fim desta etapa, você deverá dominar o uso de power query, manipulação de daxs e funções básicas do excel" ,
+            "titulo": "1. Fundamentos do Power Query (Uso e aplicações)",
+            "descricao": "Ao fim desta etapa, você deverá dominar o uso de power query, manipulação e suas funções básicas aplicadas ao dia a dia" ,
             "link_1": "",
             "link_2": "",
             "link_3": ""
         },
 
         {
-            "titulo": "1. Fundamentos (Power query, Daxs  e excel)",
+            "titulo": "1. Dax (Linguagem, construções e etc)",
             "descricao": "Ao fim desta etapa, você deverá dominar o uso de power query, manipulação de daxs e funções básicas do excel" ,
             "link_1": "",
             "link_2": "",
