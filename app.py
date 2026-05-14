@@ -75,7 +75,7 @@ p, li, span, div {
 
 /* HOVER BOTAO */
 .stLinkButton a:hover {
-    background-color: #a3e635 !important;
+    background-color: #1a0b50 !important;
     color: #020617 !important;
 }
 
