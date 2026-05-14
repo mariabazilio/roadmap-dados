@@ -87,7 +87,7 @@ button[data-baseweb="tab"] {
 }
 
 button[data-baseweb="tab"][aria-selected="true"] {
-    color: #84cc16 !important;
+    color: #1a0b50 !important;
 }
 
 /* SIDEBAR */
@@ -145,7 +145,7 @@ with aba1:
             "ano": "1640",
             "titulo": "Estatísticas de saúde pública",
             "texto": "John Graunt coletou dados sobre mortes em Londres, analisando causas, idade e mortalidade.",
-            "link": "https://en.wikipedia.org/wiki/John_Graunt"
+            "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10919065/"
         },
 
         {
@@ -159,7 +159,7 @@ with aba1:
             "ano": "1928",
             "titulo": "Armazenamento magnético",
             "texto": "Fritz Pfleumer patenteou a fita magnética, tecnologia que influenciou formas modernas de armazenamento.",
-            "link": "https://en.wikipedia.org/wiki/Fritz_Pfleumer"
+            "link": "https://ethw.org/Magnetic_Tape"
         },
 
         {
@@ -221,7 +221,7 @@ with aba2:
         },
         
         {
-            "titulo": "3. GitLab (O que o distingue do Github e suas principais aplicações",
+            "titulo": "4. GitLab (O que o distingue do Github e suas principais aplicações",
             "descricao": "Ao fim desta etapa, você terá domínio no gerenciamento de tarefas, criação de tasks e demais funções",
             "link_1": "https://www.youtube.com/watch?v=un8CDE8qOR8",
             "link_2": "https://zup.com.br/blog/git-github-e-gitlab/",
