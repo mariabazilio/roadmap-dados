@@ -278,23 +278,8 @@ with aba3:
             "link_1": "https://learn.microsoft.com/en-us/power-bi/report-server/install-report-server",
             "link_2": "https://www.datascienceacademy.com.br/course/microsoft-power-bi-para-business-intelligence-e-data-science",
             "link_3": "https://www.datascienceacademy.com.br/course/microsoft-power-bi-para-business-intelligence-e-data-science"
-        },
-
-        {
-            "titulo": "4. ?",
-            "descricao": "?",
-            "link_1": "",
-            "link_2": "",
-            "link_3": ""
-        },
-
-        {
-            "titulo": "5. ?",
-            "descricao": "?",
-            "link_1": "",
-            "link_2": "",
-            "link_3": ""
         }
+
     ]
     for etapa in etapas:
 
