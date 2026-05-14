@@ -56,13 +56,6 @@ p, li, span, div {
     box-shadow: 0 10px 28px rgba(0,0,0,0.35);
 }
 
-/* SETA */
-.arrow {
-    text-align: center;
-    font-size: 42px;
-    color: #64748b;
-}
-
 /* BOTÕES */
 .stLinkButton a {
     background-color: #84cc16 !important;
